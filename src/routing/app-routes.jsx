@@ -10,6 +10,7 @@ const AboutUsPage = lazy(() => import("../app/components/company/about-us"));
 const ServicesPage = lazy(() =>
   import("../app/components/IT solutions/services/services")
 );
+const PortfolioDetails = lazy(() => import("../app/sections/portfolio/PortfolioDetails"));
 
 function AppRoutes({ setLoading }) {
   return (
@@ -30,6 +31,7 @@ function AppRoutes({ setLoading }) {
           path="/app-development"
           element={<LandingPage page={"app-development"} />}
         />
+        <Route path="/portfolio/:id" element={<PortfolioDetails />} />
         <Route path="/thank-you" element={<Thankyou />} />
       </Routes>
     </>

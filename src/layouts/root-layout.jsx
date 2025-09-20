@@ -1,5 +1,6 @@
 import Footer from "../app/sections/common/footer";
 import Header1 from "../app/sections/common/header1";
+import WhatsAppButton from "../app/elements/WhatsAppButton";
 
 import AppRoutes from "../routing/app-routes";
 
@@ -18,6 +19,9 @@ function RootLayout({ setLoading }) {
         <button className="scroltop">
           <span className="fa fa-angle-up  relative" id="btn-vibrate"></span>
         </button>
+        
+        {/* WhatsApp Button */}
+        <WhatsAppButton />
       </div>
     </>
   );

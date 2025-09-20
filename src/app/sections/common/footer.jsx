@@ -51,7 +51,7 @@ function Footer() {
                     </div>
                     <div className="sx-f-call-section">
                       <span>Contact us 24/7</span>
-                      <a href={companyDetails.number}>
+                      <a href={`tel:${companyDetails.number}`}>
                         {companyDetails.number}
                       </a>
                     </div>
@@ -114,7 +114,9 @@ function Footer() {
                         <i className="flaticon-phone" />
                       </div>
                       <div className="widget-info-detail">
-                        <p>{companyDetails.number}</p>
+                        <a href={`tel:${companyDetails.number}`}>
+                          {companyDetails.number}
+                        </a>
                       </div>
                     </li>
                     <li>
@@ -221,8 +223,8 @@ function Footer() {
             </ul>
           </div>
           <div className="sx-f-copy">
-            © 2024 by <NavLink to="/index">Flamingo.</NavLink> All rights
-            reserved.
+            © {new Date().getFullYear()} by{" "}
+            <NavLink to="/index">Flamingo.</NavLink> All rights reserved.
           </div>
         </div>
         {/* FOOTER COPYRIGHT */}

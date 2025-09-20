@@ -5505,7 +5505,7 @@ button.scroltop {
   background: var(--primary);
   border: none;
   position: fixed;
-  right: 15px;
+  left: 15px;
   bottom: 15px;
   text-transform: uppercase;
   margin: 0;

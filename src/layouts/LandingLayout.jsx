@@ -2,6 +2,7 @@ import { useLocation } from "react-router-dom";
 import { lazy, useRef } from "react";
 import ContactForm from "../app/landingPage/components/ContactForm";
 import JoinHappyCustomers from "../app/components/JoinHappyCustomers";
+import WhatsAppButton from "../app/elements/WhatsAppButton";
 const LandingHeader = lazy(() =>
   import("../app/sections/common/LandingHeader")
 );
@@ -82,6 +83,9 @@ function RootLandingLayout({ setLoading }) {
         <button className="scroltop">
           <span className="fa fa-angle-up  relative" id="btn-vibrate"></span>
         </button>
+        
+        {/* WhatsApp Button */}
+        <WhatsAppButton />
       </div>
     </>
   );

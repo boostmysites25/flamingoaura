@@ -1,4 +1,5 @@
 import ItodoImage from "../../elements/itodo-img";
+import { Link } from "react-router-dom";
 import {
   appPortfolio,
   publicUrlFor,
@@ -36,33 +37,38 @@ function Portfolio({ page }) {
                 </div>
                 {/* TITLE END */}
               </div>
-              {/* <div className="col-lg-6 col-md-6">
-                                <div className=" large-title-info">
-                                    <p>Nunc tempor ultrices iaculis. Cras suscipit odio ut neque interdum, sed faucibus lorem feugiat.
-                                        tincidunt tellus quis iaculis interdum. Donec a lobortis arcu. Fusce viverra a dolor quis tincidunt. Pellentesque vitae diam sodales nisl dapibus finibus.
-                                    </p>
-                                </div>
-                            </div> */}
             </div>
           </div>
           <div className="section-content">
             <div className="portfolio_grid">
-              {portfolio.map(({ title, img }) => (
-                <div
-                  key={title}
-                  className="item"
-                >
+              {portfolio.map(({ title, img, link, projectId }) => (
+                <div key={title} className="item">
                   <div className="sx-service-bx-2">
                     <div className="sx-icon-box-wraper">
                       <div className="sx-img-bx">
                         <span className="sx-img-bx-media">
-                          <ItodoImage
-                            src={img}
-                            alt="image"
-                          />
+                          <ItodoImage src={img} alt="image" />
                         </span>
                         <div className="p-2">
                           <p className="sx-why-ch-category">{title}</p>
+                          <div className="d-flex gap-2">
+                            <Link
+                              to={`/portfolio/${projectId}`}
+                              className="site-button sx-btn-secondary text-black icon sx-btn-md mt-2"
+                            >
+                              View Details
+                            </Link>
+                            {link && (
+                              <a
+                                href={link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="site-button sx-btn-primary text-white icon sx-btn-md mt-2"
+                              >
+                                Live Demo
+                              </a>
+                            )}
+                          </div>
                         </div>
                       </div>
                     </div>
