@@ -1,5 +1,4 @@
 import { Link, NavLink, useLocation } from "react-router-dom";
-import ItodoImage from "../../elements/itodo-img";
 import { useState } from "react";
 import { loadScript } from "../../../globals/constants";
 import { useEffect } from "react";
@@ -23,106 +22,16 @@ function Header1() {
           (isActive ? "active" : "")
         }
       >
-        {/* <div className="top-bar">
-          <div className="container"> */}
-        {/* <div className="d-flex justify-content-between  align-content-center"> */}
-        {/* <div className="sx-topbar-left">
-                <ul className="e-p-bx">
-                  <li>kali.me@gmail.com</li>
-                  <li>
-                    <a href="tel:(1)245-45678">(1)245-45678 call</a>
-                  </li>
-                </ul>
-              </div> */}
-        {/* <div className="sx-topbar-right"> */}
-        {/* <div className="top-bar-nav">
-                  <ul>
-                    <li>
-                      <NavLink to="/about-us">Terms &amp; Condition</NavLink>
-                    </li>
-                    <li>
-                      <NavLink to="/faq">Privacy Policy</NavLink>
-                    </li>
-                    <li>
-                      <NavLink to="/contact-us">Contact Us</NavLink>
-                    </li>
-                  </ul>
-                </div> */}
-        {/* <div className="sx-language-dd dropdown">
-                  <div className="sl-nav-1">
-                    <div className="sx-language-first sx-title" id="FR">
-                      <b>FR</b>
-                    </div>
-                    <button
-                      className="sl-nav-1-btn dropdown-toggle"
-                      type="button"
-                      id="dropdownMenuButton1"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      En
-                    </button>
-                    <ul
-                      className="dropdown-menu"
-                      aria-labelledby="dropdownMenuButton1"
-                    >
-                      <li>
-                        <div className="sl-flag">
-                          <div className="c-name">
-                            <ItodoImage
-                              src="images/flag/germany.png"
-                              alt="alt"
-                            />
-                          </div>
-                        </div>
-                        <span className="active">Germany</span>
-                      </li>
-                      <li>
-                        <div className="sl-flag">
-                          <div className="c-name">
-                            <ItodoImage src="images/flag/italy.png" alt="alt" />
-                          </div>
-                        </div>
-                        <span className="active">Italy</span>
-                      </li>
-                      <li>
-                        <div className="sl-flag">
-                          <div className="c-name">
-                            <ItodoImage src="images/flag/spain.png" alt="alt" />
-                          </div>
-                        </div>
-                        <span className="active">Spain</span>
-                      </li>
-                      <li>
-                        <div className="sl-flag">
-                          <div className="c-name">
-                            <ItodoImage
-                              src="images/flag/united-states.png"
-                              alt="alt"
-                            />
-                          </div>
-                        </div>
-                        <span className="active">USA</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div> */}
-        {/* </div> */}
-        {/* </div>
-          </div>
-        </div> */}
         <div className="sticky-header main-bar-wraper navbar-expand-lg">
           <div className="main-bar">
             <div className="container clearfix">
               <Link to="/" className="logo-header">
-                {/* <div className="logo-header-inner logo-header-one"> */}
                 <img
                   src="/logo.jpeg"
                   alt="Logo"
                   className="header-logo-main"
                   style={{ height: "5rem", width: "3.9rem" }}
                 />
-                {/* </div> */}
               </Link>
               {/* NAV Toggle Button */}
               <button
@@ -137,132 +46,33 @@ function Header1() {
                 <span className="icon-bar icon-bar-two" />
                 <span className="icon-bar icon-bar-three" />
               </button>
-              {/* EXTRA NAV  social media link*/}
-              {/* <div className="extra-nav">
-                <div className="extra-cell">
-                  <ul className="list-unstyled social-bx d-flex flex-wrap align-content-center">
-                    <li>
-                      <a href="https://www.facebook.com/">
-                        <i className="feather-facebook" />{" "}
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://twitter.com/">
-                        <i className="feather-twitter" />{" "}
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://www.linkedin.com/">
-                        <i className="feather-linkedin" />{" "}
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://www.instagram.com/">
-                        <i className="feather-instagram" />{" "}
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div> */}
-              {/* EXTRA Nav */}
-              {/* MAIN NAVIGATION */}
+
               <div className="header-nav navbar-collapse collapse d-flex justify-content-end collapse ">
                 <ul className=" nav navbar-nav ">
                   <li className={location.pathname === "/" ? "active" : ""}>
-                    <NavLink to="/">Home</NavLink>
-                    {/* <ul className="sub-menu">
-                                            <li><NavLink to="/index">Home-1</NavLink></li>
-                                            <li><NavLink to="/index2">Home-2</NavLink></li>
-                                            <li><NavLink to="/index3">Home-3</NavLink></li>
-                                        </ul> */}
+                    <NavLink to="/" onClick={() => setIsActive(false)}>Home</NavLink>
                   </li>
                   <li
                     className={
                       location.pathname === "/services" ? "active" : ""
                     }
                   >
-                    <NavLink to="/services">Services</NavLink>
-                    {/* <ul className="sub-menu">
-                      <li>
-                        <NavLink to="/about-us">About Us</NavLink>
-                      </li>
-                      <li>
-                        <NavLink to="/faq">Faq Page</NavLink>
-                      </li>
-                      <li>
-                        <NavLink to="/gallery">Gallery</NavLink>
-                      </li>
-                      <li>
-                        <NavLink to="/icons">Icons</NavLink>
-                      </li>
-                      <li>
-                        <NavLink to="/testimonials">Testimonials</NavLink>
-                      </li>
-                      <li>
-                        <NavLink to="/why-choose-us">Why Choose Us</NavLink>
-                      </li>
-                      <li>
-                        <NavLink to="/pricing">Pricing</NavLink>
-                      </li>
-                      <li>
-                        <NavLink to="/team">Team</NavLink>
-                      </li>
-                    </ul> */}
+                    <NavLink to="/services" onClick={() => setIsActive(false)}>Services</NavLink>
                   </li>
                   <li
                     className={
                       location.pathname === "/about-us" ? "active" : ""
                     }
                   >
-                    <NavLink to="/about-us">About us</NavLink>
-                    {/* <ul className="sub-menu">
-                      <li>
-                        <NavLink to="/mission">Mission &amp; Vision</NavLink>
-                      </li>
-                      <li>
-                        <NavLink to="/services">Services</NavLink>
-                      </li>
-                      <li>
-                        <NavLink to="/services/detail">Services Detail</NavLink>
-                      </li>
-                      <li>
-                        <NavLink to="/portfolio">Portfolio</NavLink>
-                      </li>
-                      <li>
-                        <NavLink to="/portfolio2">Portfolio-2</NavLink>
-                      </li>
-                      <li>
-                        <NavLink to="/portfolio/detail">
-                          Portfolio Detail
-                        </NavLink>
-                      </li>
-                    </ul> */}
+                    <NavLink to="/about-us" onClick={() => setIsActive(false)}>About us</NavLink>
                   </li>
-                  {/* <li>
-                    <NavLink to="/blogs">IT Blogs</NavLink>
-                    <ul className="sub-menu">
-                      <li>
-                        <NavLink to="/blogs">Blog</NavLink>
-                      </li>
-                      <li>
-                        <NavLink to="/blogs/list">Blog Grid Sidebar </NavLink>
-                      </li>
-                      <li>
-                        <NavLink to="/blogs/detail-with-sidebar">
-                          Blog Detail Sidebar
-                        </NavLink>
-                      </li>
-                      <li>
-                        <NavLink to="/blogs/detail">Blog Detail</NavLink>
-                      </li>
-                    </ul>
-                  </li> */}
+
                   <li
                     className={
                       location.pathname === "/contact-us" ? "active" : ""
                     }
                   >
-                    <NavLink to="/contact-us">Contact Us</NavLink>
+                    <NavLink to="/contact-us" onClick={() => setIsActive(false)}>Contact Us</NavLink>
                   </li>
                 </ul>
               </div>

@@ -1,5 +1,4 @@
 import { NavLink, useLocation } from "react-router-dom";
-import ItodoImage from "../../elements/itodo-img";
 import { useState } from "react";
 import { loadScript } from "../../../globals/constants";
 import { useEffect } from "react";
@@ -61,6 +60,7 @@ function LandingHeader({
                     onClick={(e) => {
                       e.preventDefault(); // Prevent default anchor behavior
                       scrollToSection(homeRef); // Call the scroll function
+                      setIsActive(false); // Close mobile menu
                     }}
                   >
                     <NavLink>Home</NavLink>
@@ -72,6 +72,7 @@ function LandingHeader({
                     onClick={(e) => {
                       e.preventDefault(); // Prevent default anchor behavior
                       scrollToSection(servicesRef); // Call the scroll function
+                      setIsActive(false); // Close mobile menu
                     }}
                   >
                     <NavLink>Services</NavLink>
@@ -83,6 +84,7 @@ function LandingHeader({
                     onClick={(e) => {
                       e.preventDefault(); // Prevent default anchor behavior
                       scrollToSection(aboutRef); // Call the scroll function
+                      setIsActive(false); // Close mobile menu
                     }}
                   >
                     <NavLink>About us</NavLink>
@@ -95,6 +97,7 @@ function LandingHeader({
                     onClick={(e) => {
                       e.preventDefault(); // Prevent default anchor behavior
                       scrollToSection(contactRef); // Call the scroll function
+                      setIsActive(false); // Close mobile menu
                     }}
                   >
                     <NavLink>Contact Us</NavLink>
